@@ -1,0 +1,11 @@
+resolver: lts-24.2
+
+packages:
+  - .
+
+ghc-options:
+  "$locals": -Wall -Wcompat
+
+flags:
+  sdl2:
+    pkgconfig: false
