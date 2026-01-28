@@ -166,6 +166,7 @@ library
 
   if os(windows)
     cpp-options: -D_SDL_main_h -DSDL_main_h_
+    extra-libraries: ssp
 
 test-suite sdl-space
   type:                exitcode-stdio-1.0
