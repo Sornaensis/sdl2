@@ -125,8 +125,8 @@ library
     include
 
   includes:
-    SDL.h
-    SDL_vulkan.h
+    SDL2/SDL.h
+    SDL2/SDL_vulkan.h
     sdlhelper.h
 
   extra-libraries:
