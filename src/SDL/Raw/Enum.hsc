@@ -961,7 +961,7 @@ module SDL.Raw.Enum (
   pattern SDL_HAPTIC_CONSTANT
 ) where
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 import Data.Int
 import Data.Word

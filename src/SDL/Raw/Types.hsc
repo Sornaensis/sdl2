@@ -80,7 +80,7 @@ module SDL.Raw.Types (
   Version(..)
 ) where
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 import Data.Int
 import Data.Typeable

@@ -6,7 +6,7 @@ module SDL.Raw.Platform (
 import Control.Monad.IO.Class
 import Foreign.C.String
 
-foreign import ccall "SDL.h SDL_GetPlatform" getPlatformFFI :: IO CString
+foreign import ccall "SDL2/SDL.h SDL_GetPlatform" getPlatformFFI :: IO CString
 
 getPlatform :: MonadIO m => m CString
 getPlatform = liftIO getPlatformFFI

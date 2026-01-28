@@ -20,15 +20,15 @@ import Foreign.C.Types
 import Foreign.Ptr
 import SDL.Raw.Types
 
-foreign import ccall "SDL.h SDL_AddTimer" addTimerFFI :: Word32 -> TimerCallback -> Ptr () -> IO TimerID
-foreign import ccall "SDL.h SDL_Delay" delayFFI :: Word32 -> IO ()
-foreign import ccall "SDL.h SDL_GetPerformanceCounter" getPerformanceCounterFFI :: IO Word64
-foreign import ccall "SDL.h SDL_GetPerformanceFrequency" getPerformanceFrequencyFFI :: IO Word64
-foreign import ccall "SDL.h SDL_GetTicks" getTicksFFI :: IO Word32
-foreign import ccall "SDL.h SDL_RemoveTimer" removeTimerFFI :: TimerID -> IO Bool
+foreign import ccall "SDL2/SDL.h SDL_AddTimer" addTimerFFI :: Word32 -> TimerCallback -> Ptr () -> IO TimerID
+foreign import ccall "SDL2/SDL.h SDL_Delay" delayFFI :: Word32 -> IO ()
+foreign import ccall "SDL2/SDL.h SDL_GetPerformanceCounter" getPerformanceCounterFFI :: IO Word64
+foreign import ccall "SDL2/SDL.h SDL_GetPerformanceFrequency" getPerformanceFrequencyFFI :: IO Word64
+foreign import ccall "SDL2/SDL.h SDL_GetTicks" getTicksFFI :: IO Word32
+foreign import ccall "SDL2/SDL.h SDL_RemoveTimer" removeTimerFFI :: TimerID -> IO Bool
 
 #ifdef RECENT_ISH
-foreign import ccall "SDL.h SDL_GetTicks64" getTicks64FFI :: IO Word64
+foreign import ccall "SDL2/SDL.h SDL_GetTicks64" getTicks64FFI :: IO Word64
 #endif
 
 addTimer :: MonadIO m => Word32 -> TimerCallback -> Ptr () -> m TimerID

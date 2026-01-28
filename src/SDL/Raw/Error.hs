@@ -24,8 +24,8 @@ newtype SDLError = SDLError CString
 
 instance Exception SDLError
 
-foreign import ccall "SDL.h SDL_ClearError" clearErrorFFI :: IO ()
-foreign import ccall "SDL.h SDL_GetError" getErrorFFI :: IO CString
+foreign import ccall "SDL2/SDL.h SDL_ClearError" clearErrorFFI :: IO ()
+foreign import ccall "SDL2/SDL.h SDL_GetError" getErrorFFI :: IO CString
 foreign import ccall "sdlhelper.c SDLHelper_SetError" setErrorFFI :: CString -> IO CInt
 
 throwError :: (MonadThrow m, MonadIO m) => m ()
