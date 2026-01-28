@@ -2,7 +2,7 @@
 #define _HS_SDL2_HELPER_H_
 
 #include <stddef.h>
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 int SDLHelper_GetEventBufferSize(void);
 SDL_Event *SDLHelper_GetEventBuffer(void);
